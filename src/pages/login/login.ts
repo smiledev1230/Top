@@ -23,5 +23,9 @@ export class LoginPage {
 
   loginLinkedin() {
     this.loginProvider.loginLinkedin();
-  }  
+  }
+
+  register() {
+    
+  }
 }

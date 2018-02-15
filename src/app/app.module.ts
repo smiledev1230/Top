@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { LinkedIn } from '@ionic-native/linkedin';
 
 import { MyApp } from './app.component';
 
@@ -35,7 +36,8 @@ import { ConfigProvider } from '../providers/config';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
     ConfigProvider,
-    Facebook
+    Facebook,
+    LinkedIn
   ]
 })
 export class AppModule {}

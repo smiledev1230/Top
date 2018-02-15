@@ -1,3 +1,84 @@
 page-login {
-
+    .scroll-content,ion-content.content {
+        overflow: hidden;
+        background-color: #54b5e8;
+        color: #fff;
+        ion-item {
+            padding: 0px !important;
+            border: 0px !important;
+            .item-inner {
+                border: 0px !important;
+            }
+        }
+        .login-top {
+            content: "";
+            display: block;
+            max-width: 100%;
+            height: 45vh;
+            background-color: #54b5e8;
+            background-image: url(../assets/imgs/airplane.png);
+            background-repeat: no-repeat;
+            background-size: 95%;
+            background-position-x: 25px;
+        }
+        .app-logo {
+            content: url(../assets/imgs/app_logo.png);
+            height: 30vh;
+            max-height: 250px;
+            position: absolute;
+            margin: auto;
+            top: 5vh;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+        }
+        .login-content {
+            text-align: center;
+            .label {
+                margin: 11px auto;
+                max-width: 300px;
+                line-height: 18px;
+                button {
+                    height: 50px;
+                }
+            }
+            .facebook-button {
+                margin-top: 3vh;
+                button {
+                    background-color: #3b5998;
+                    ion-icon {
+                        background-color: #fefefe;
+                        color: #3b5998;
+                        height: 18px;
+                    }
+                    .ion-logo-facebook:before {
+                        margin: -5px;
+                        font-size: 28px;
+                    }
+                }
+            }
+            .linkedin-button {
+                margin-bottom: 3vh;
+                button {
+                    background-color: #0077b5;
+                    ion-icon {
+                        background-color: #fefefe;
+                        color: #0077b5;
+                        height: 18px;
+                        margin-left: -15px;
+                    }
+                    .ion-logo-linkedin:before {
+                        margin: -5px -3px -3px -3px;
+                        font-size: 28px;
+                    }                    
+                }
+            }
+            .register-button {
+                button {
+                    background-color: #54b5e8;
+                    border: 2px solid #a4d8f3;
+                }
+            }
+        }
+    }
 }
