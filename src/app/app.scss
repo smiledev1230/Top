@@ -18,7 +18,51 @@
     font-family: "Lobster1.4";
     src: url("../assets/fonts/Lobster_1_4.woff") format("woff");
 }
-
+ion-header {
+    font-family: "Lobster1.4";
+    ion-navbar {
+        box-shadow: 0px 1px #e4e5e5;
+    }
+    .toolbar-background {
+        background: $header-color;
+    }
+    ion-title {
+        .title-logo {
+            width: 51px;
+            height: 40px;
+            margin: 3px auto;
+            background: url(../assets/imgs/title_logo.png) no-repeat;
+        }
+        .label {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            color: #c6cbd4;
+            font-weight: 500;
+        }
+    }
+}
 .scroll-content, ion-content.content {
     font-family: "Lobster1.4";
+    background-color: $content-color;
+    color: $label-text;
+    .title-label {
+        font-size: 28px;
+        color: $title-label;
+    }
+    .label-text {
+        margin-bottom: 0px;
+    }
+}
+.back-button.show-back-button {
+    color: #6c727c;
+    .back-button-text {
+        display: none;
+    }
+}
+.area-show {
+    display: block;
+}
+.area-hide {
+    display: none;
 }

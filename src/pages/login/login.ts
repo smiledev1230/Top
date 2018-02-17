@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { LoginProvider } from '../../providers/login';
+import { EnterPhonePage } from '../enter-phone/enter-phone';
 
 @Component({
   selector: 'page-login',
@@ -26,6 +27,6 @@ export class LoginPage {
   }
 
   register() {
-    
+    this.navCtrl.push(EnterPhonePage);
   }
 }
