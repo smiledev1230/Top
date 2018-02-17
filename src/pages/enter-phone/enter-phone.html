@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <div class="title-logo"></div>
+      <ion-label (click)="nextPage()">Next</ion-label>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-label class="title-label">Enter your Phone #</ion-label>
+    <p class="label-text">Phone #</p>
+    <div class="phone_group">
+      <div (click)="selectCountry()" class="country-flag">
+        <ion-icon class="flag-icon flag-icon-{{select_code}}" item-left></ion-icon>
+        <div class="select-icon-image"></div>
+      </div>
+      <ion-item>
+        <ion-input [(ngModel)]='local_number' type="tel" clearInput placeholder="123-456-789"  maxlength="12"></ion-input>
+      </ion-item>
+      <ion-scroll scrollX="false" scrollY="true" zoom="false" no-padding [ngClass]="{'area-show': list_status== true,'area-hide': list_status != true}">
+        <ion-grid>
+          <ion-row *ngFor="let code of country_codes; let i=index;" (click)="selectCode(i)">
+            <ion-icon class="flag-icon flag-icon-{{code.code.toLowerCase()}}" item-left></ion-icon>
+            <p>{{code.name}} {{code.dial_code}}</p>
+          </ion-row>
+        </ion-grid>
+      </ion-scroll>
+    </div>
+  </ion-list>
+  <p class="text-again">Didn't get it? Text again</p>
+</ion-content>
