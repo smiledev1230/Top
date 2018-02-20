@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <div class="title-logo"></div>
+      <ion-label (click)="nextPage()">Next</ion-label>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+        <p class="title-text">I am a …</p>
+        <div class="sex-buttons">
+          <button ion-button>Woman</button>
+          <div class="group_or">
+            <img/>
+          </div>
+          <button ion-button>Man</button>
+        </div>
+    </ion-row>
+    <ion-row>
+        <p class="title-text">Interested in…</p>
+        <ion-row class="interest-group">
+          <ion-col class="sex-women"><img /><p>WOMEN</p></ion-col>
+          <ion-col class="sex-man"><img /><p>MAN</p></ion-col>
+          <ion-col class="sex-both"><img /><p>BOTH</p></ion-col>
+        </ion-row>
+        <div class="interest-title"><p>We will never reveal your name on your behalf, only initials on Top</p></div>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="user-info">
+    <ion-row>
+      <p>First Name</p>
+      <ion-item no-lines>
+        <ion-input type="text" [(ngModel)]="firstName" placeholder="Type here"></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <p>Last Name</p>
+      <ion-item no-lines>
+        <ion-input type="text" [(ngModel)]="lastName" placeholder="Type here"></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <p>When’s your birthday?</p>
+      <ion-item no-lines>
+        <ion-select [(ngModel)]="birthday" placeholder="Choose your birthday" interface="popover" col></ion-select>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <p>Homeland</p>
+      <ion-item no-lines>
+        <ion-select [(ngModel)]="homeland" placeholder="Choose your country" interface="popover" col>
+          <ion-option *ngFor="let code of country_list; let i=index;" value="{{code.code}}">{{code.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <p class="photo-label">Select a photo to upload:</p>
+    </ion-row>
+    <ion-row class="select-photo">
+      <ion-col><img/></ion-col>
+      <ion-col><img/></ion-col>
+      <ion-col><img/></ion-col>
+      <ion-col><img/></ion-col>
+    </ion-row>
+    <ion-row>
+      <button ion-button full (click)="save()" class="save-button">SAVE</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,104 @@
+page-register {
+    ion-content.content {
+        p {
+            margin-top: 0px;
+        }
+        ion-grid ion-row {
+            .sex-buttons{
+                display: inline-flex;
+                width: 100%;
+                button:first-child {
+                    width: 40%;
+                    background-color: $main-color;
+                    border: 2px solid $border-color;
+                }
+                button:last-child {
+                    width: 40%;
+                    color: $title-color;
+                    background-color: #fff;
+                    border: 2px solid $border-color;
+                }
+                .group_or{
+                    width: 20%;
+                    text-align: center;
+                    img {
+                        content: url(../assets/imgs/group_or.png);
+                        height: 45px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .interest-group {
+                width: 100%;
+                ion-col {
+                    text-align: center;
+                    img {
+                        height: 60px;
+                    }
+                    p {
+                        font-size: 8px;
+                        font-weight: bold;
+                        font-family: initial;
+                    }
+                }
+                .sex-women {
+                    text-align: left;
+                    img {
+                        content: url(../assets/imgs/sex-women.png);
+                    }
+                    p {
+                        padding-left: 12px;
+                    }
+                }
+                .sex-man {
+                    img {
+                        content: url(../assets/imgs/sex-man.png);
+                    }
+                }
+                .sex-both {
+                    text-align: right;
+                    img {
+                        content: url(../assets/imgs/sex-both.png);
+                    }
+                    p {
+                        padding-right: 20px;
+                    }                    
+                }
+            }
+            .interest-title {
+                font-size: 11px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+        ion-grid.user-info {
+            ion-row:first-child {
+                margin-top: -5px;
+            }
+            ion-row {
+                margin-top: 12px;
+                p {
+                    color: $title-color;
+                    margin-bottom: 5px;
+                }
+                ion-item {
+                    background-color: #fff;
+                    border: 2px solid #e6e6e6;
+                }
+                .photo-label {
+                    margin-bottom: -10px;
+                }
+                .save-button {
+                    background-color: $content-color;
+                    border: 2px solid $border-color;
+                    color: $title-color;
+                }
+            }
+            .select-photo img {
+                content: url(../assets/imgs/woman.png);
+                border: 2px solid $border-color;
+                border-radius: 5px;
+            }
+        }
+    }
+}
