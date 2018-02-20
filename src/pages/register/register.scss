@@ -99,6 +99,9 @@ page-register {
                 border: 2px solid $border-color;
                 border-radius: 5px;
             }
+            ion-select {
+                padding-left: 0px;
+            }
         }
     }
 }
