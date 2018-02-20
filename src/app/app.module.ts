@@ -12,6 +12,7 @@ import { LoginPage } from '../pages/login/login';
 import { EnterPhonePage } from '../pages/enter-phone/enter-phone';
 import { VerifyPinPage } from '../pages/verify-pin/verify-pin';
 import { RegisterPage } from '../pages/register/register';
+import { AddCardPage } from '../pages/add-card/add-card';
 
 import { LoginProvider } from '../providers/login';
 import { ConfigProvider } from '../providers/config';
@@ -27,7 +28,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     LoginPage,
     EnterPhonePage,
     VerifyPinPage,
-    RegisterPage
+    RegisterPage,
+    AddCardPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     LoginPage,
     EnterPhonePage,
     VerifyPinPage,
-    RegisterPage
+    RegisterPage,
+    AddCardPage
   ],
   providers: [
     StatusBar,

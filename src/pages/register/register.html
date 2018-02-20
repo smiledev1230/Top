@@ -11,19 +11,19 @@
     <ion-row>
         <p class="title-text">I am a …</p>
         <div class="sex-buttons">
-          <button ion-button>Woman</button>
+          <button ion-button [ngClass]="{'button-inactive': user.gender!=1}" (click)="sexClick(1)">Woman</button>
           <div class="group_or">
             <img/>
           </div>
-          <button ion-button>Man</button>
+          <button ion-button [ngClass]="{'button-inactive': user.gender==1}" (click)="sexClick(0)">Man</button>
         </div>
     </ion-row>
     <ion-row>
         <p class="title-text">Interested in…</p>
         <ion-row class="interest-group">
-          <ion-col class="sex-women"><img /><p>WOMEN</p></ion-col>
-          <ion-col class="sex-man"><img /><p>MAN</p></ion-col>
-          <ion-col class="sex-both"><img /><p>BOTH</p></ion-col>
+          <ion-col class="sex-women"><img (click)="interestClick(1)"/><p>WOMEN</p></ion-col>
+          <ion-col class="sex-man"><img (click)="interestClick(2)"/><p>MAN</p></ion-col>
+          <ion-col class="sex-both"><img (click)="interestClick(3)"/><p>BOTH</p></ion-col>
         </ion-row>
         <div class="interest-title"><p>We will never reveal your name on your behalf, only initials on Top</p></div>
     </ion-row>
@@ -32,25 +32,26 @@
     <ion-row>
       <p>First Name</p>
       <ion-item no-lines>
-        <ion-input type="text" [(ngModel)]="firstName" placeholder="Type here"></ion-input>
+        <ion-input type="text" [(ngModel)]="user.fname" placeholder="Type here"></ion-input>
       </ion-item>
     </ion-row>
     <ion-row>
       <p>Last Name</p>
       <ion-item no-lines>
-        <ion-input type="text" [(ngModel)]="lastName" placeholder="Type here"></ion-input>
+        <ion-input type="text" [(ngModel)]="user.lname" placeholder="Type here"></ion-input>
       </ion-item>
     </ion-row>
     <ion-row>
       <p>When’s your birthday?</p>
       <ion-item no-lines>
-        <ion-select [(ngModel)]="birthday" placeholder="Choose your birthday" interface="popover" col></ion-select>
+        <!-- <ion-select [(ngModel)]="birthday" placeholder="Choose your birthday" interface="popover" col></ion-select> -->
+        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="user.birthdate"></ion-datetime>
       </ion-item>
     </ion-row>
     <ion-row>
       <p>Homeland</p>
       <ion-item no-lines>
-        <ion-select [(ngModel)]="homeland" placeholder="Choose your country" interface="popover" col>
+        <ion-select [(ngModel)]="user.country" placeholder="Choose your country" interface="popover" col>
           <ion-option *ngFor="let code of country_list; let i=index;" value="{{code.code}}">{{code.name}}</ion-option>
         </ion-select>
       </ion-item>
@@ -65,7 +66,7 @@
       <ion-col><img/></ion-col>
     </ion-row>
     <ion-row>
-      <button ion-button full (click)="save()" class="save-button">SAVE</button>
+      <button ion-button full (click)="nextPage()" class="save-button">SAVE</button>
     </ion-row>
   </ion-grid>
 </ion-content>
