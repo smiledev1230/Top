@@ -11,9 +11,11 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { EnterPhonePage } from '../pages/enter-phone/enter-phone';
 import { VerifyPinPage } from '../pages/verify-pin/verify-pin';
+import { RegisterPage } from '../pages/register/register';
 
 import { LoginProvider } from '../providers/login';
 import { ConfigProvider } from '../providers/config';
+import { DataProvider } from '../providers/data';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,7 +26,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     HomePage,
     LoginPage,
     EnterPhonePage,
-    VerifyPinPage
+    VerifyPinPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     HomePage,
     LoginPage,
     EnterPhonePage,
-    VerifyPinPage
+    VerifyPinPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
@@ -46,7 +50,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     LoginProvider,
     ConfigProvider,
     Facebook,
-    LinkedIn
+    LinkedIn,
+    DataProvider
   ]
 })
 export class AppModule {}

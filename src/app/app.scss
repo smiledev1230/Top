@@ -24,7 +24,7 @@ ion-header {
         box-shadow: 0px 1px #e4e5e5;
     }
     .toolbar-background {
-        background: $header-color;
+        background: $toolbar-color;
     }
     ion-title {
         .title-logo {
@@ -37,7 +37,7 @@ ion-header {
             position: absolute;
             top: 0px;
             right: 0px;
-            color: #c6cbd4;
+            color: $label-color;
             font-weight: 500;
         }
     }
@@ -45,13 +45,17 @@ ion-header {
 .scroll-content, ion-content.content {
     font-family: "Lobster1.4";
     background-color: $content-color;
-    color: $label-text;
-    .title-label {
+    color: $label-color;
+    .header-text {
         font-size: 28px;
-        color: $title-label;
+        color: $header-color;
     }
-    .label-text {
+    .title-text {
+        color: $title-color;
         margin-bottom: 0px;
+    }
+    ion-item {
+        color: $title-color;
     }
 }
 .back-button.show-back-button {

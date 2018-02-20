@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RegisterPage } from '../register/register';
 
 @Component({
   selector: 'page-verify-pin',
@@ -11,8 +12,10 @@ export class VerifyPinPage {
   }
 
   ionViewDidLoad() {
-    let phone_number = this.navParams.get('phone_number');
-    console.log(phone_number);
-  }
 
+  }
+  nextPage() {
+    let phone_number = this.navParams.get('phone_number');
+    this.navCtrl.push(RegisterPage,{'phone_number': phone_number});
+  }
 }
