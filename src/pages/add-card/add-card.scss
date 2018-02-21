@@ -1,3 +1,41 @@
 page-add-card {
-
+    .scroll-content,ion-content.content {
+        background-color: #f5f5f5;
+        padding: 0px !important;
+        overflow: hidden;
+        text-align: center;
+        .card-header {
+            height: 35vh;
+            background-image: url(../assets/imgs/people-icon.png);
+            background-repeat: no-repeat;
+            background-size: 90px 90px;
+            background-position: center;
+            .card-person {
+                height: 25vh;
+                margin: 6vh auto;
+            }
+        }
+        .card-content {
+            height: 65vh;
+            background-image: url(../assets/imgs/shape.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding-top: 1.6vh;
+            .add-plus {
+                content: url(../assets/imgs/add-plus.png);
+                height: 10vh;
+            }
+            .add-card-button {
+                content: url(../assets/imgs/add-card-button.png);
+                height: 80px;
+            }
+            .upload-text {
+                color: #2160a8;
+                font-size: 18px;
+            }
+            p {
+                margin: 3vh auto;
+            }
+        }
+    }
 }
