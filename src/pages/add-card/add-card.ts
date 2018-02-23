@@ -6,7 +6,7 @@ import { PassengerPage } from '../passenger/passenger';
   templateUrl: 'add-card.html',
 })
 export class AddCardPage {
-  private cardPerson: string = "../assets/imgs/camera.png";
+  private cardPerson: string = "assets/imgs/camera.png";
   private userName: any = "Andrey";
   private userAge: any = "34";
   constructor(public navCtrl: NavController, public navParams: NavParams) {

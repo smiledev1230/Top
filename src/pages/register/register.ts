@@ -2,44 +2,43 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DataProvider } from '../../providers/data';
 import { AddCardPage } from '../add-card/add-card';
+import { HomelandPage } from '../homeland/homeland';
+
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-  public country_list: any;
-  public user = {
-    phone_number: '',
-    fname: '',
-    lname: '',
-    gender: 1,
-    interested_in: 1,
-    birthdate: new Date().toISOString(),
-    country: '',
-    photos: ''
-  }
+  public country_list: any = [];
+  public user:any;
+  public country_name:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataProvider: DataProvider) {
-    this.user.country = 'AF';
+
   }
   
   ionViewDidLoad() {
-    this.user.phone_number = this.navParams.get('phone_number');
+    console.log(this.dataProvider.user);
     this.dataProvider.getCountryCode().then(response=>{
-      this.country_list = response;
+      for (let i in response) {
+        this.country_list[response[i]['code']] = response[i]['name'];
+      }
     });
   }
 
   sexClick(gender) {
-    this.user.gender = gender;
+    this.dataProvider.user.gender = gender;
   }
   
   interestClick(value) {
-    this.user.interested_in = value;
+    this.dataProvider.user.interested_in = value;
   }
-  
+
+  homelandClick() {
+    this.navCtrl.push(HomelandPage);
+  }
+
   nextPage() {
-    console.log(this.user);
-    this.navCtrl.push(AddCardPage, {'user': this.user});
+    this.navCtrl.push(AddCardPage);
   }
 }

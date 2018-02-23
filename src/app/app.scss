@@ -22,23 +22,27 @@ ion-header {
     font-family: "Lobster1.4";
     ion-navbar {
         box-shadow: 0px 1px #e4e5e5;
-    }
-    .toolbar-background {
-        background: $toolbar-color;
-    }
-    ion-title {
-        .title-logo {
-            width: 51px;
-            height: 40px;
-            margin: 3px auto;
-            background: url(../assets/imgs/title_logo.png) no-repeat;
+        .toolbar-background {
+            background: $toolbar-color;
         }
-        .label {
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
-            color: $label-color;
-            font-weight: 500;
+        ion-title {
+            .title-logo {
+                width: 51px;
+                height: 40px;
+                margin: 3px auto;
+                background: url(../assets/imgs/title_logo.png) no-repeat;
+            }
+            .label {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                color: $label-color;
+                font-weight: 500;
+            }
+            .toolbar-title {
+                font-size: 21px;
+                color: $title-color;
+            }
         }
     }
 }

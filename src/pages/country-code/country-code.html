@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Choose Country</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="country_list" (ngModelChange)="selectCountyCode(country_list)" class="country-group">
+    <ion-item *ngFor="let code of country_codes;">
+      <ion-icon class="flag-icon flag-icon-{{code.code.toLowerCase()}}" item-left></ion-icon>
+      <ion-label>{{code.name}} {{code.dial_code}}</ion-label>
+      <ion-radio value="{{code.code}}" [checked]="code.code==dataProvider.user.country_code"></ion-radio>
+    </ion-item>
+  </ion-list>
+</ion-content>

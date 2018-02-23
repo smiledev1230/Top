@@ -15,6 +15,8 @@ import { RegisterPage } from '../pages/register/register';
 import { AddCardPage } from '../pages/add-card/add-card';
 import { PassengerPage } from '../pages/passenger/passenger';
 import { KeepPostedPage } from '../pages/keep-posted/keep-posted';
+import { CountryCodePage } from '../pages/country-code/country-code';
+import { HomelandPage } from '../pages/homeland/homeland';
 
 import { LoginProvider } from '../providers/login';
 import { ConfigProvider } from '../providers/config';
@@ -33,7 +35,9 @@ import { StatusBar } from '@ionic-native/status-bar';
     RegisterPage,
     AddCardPage,
     PassengerPage,
-    KeepPostedPage
+    KeepPostedPage,
+    CountryCodePage,
+    HomelandPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,9 @@ import { StatusBar } from '@ionic-native/status-bar';
     RegisterPage,
     AddCardPage,
     PassengerPage,
-    KeepPostedPage
+    KeepPostedPage,
+    CountryCodePage,
+    HomelandPage
   ],
   providers: [
     StatusBar,

@@ -5,6 +5,18 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataProvider {
 
+  public user = {
+    phone_number: '',
+    fname: '',
+    lname: '',
+    gender: 1,
+    interested_in: 1,
+    birthdate: new Date().toISOString(),
+    country: 'AF',
+    country_code: 'AF',
+    photos: ''
+  }
+
   constructor(public http: Http) {
     console.log('Hello DataProvider Provider');
   }

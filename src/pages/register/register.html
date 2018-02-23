@@ -11,11 +11,11 @@
     <ion-row>
         <p class="title-text">I am a …</p>
         <div class="sex-buttons">
-          <button ion-button [ngClass]="{'button-inactive': user.gender!=1}" (click)="sexClick(1)">Woman</button>
+          <button ion-button [ngClass]="{'button-inactive': dataProvider.user.gender!=1}" (click)="sexClick(1)">Woman</button>
           <div class="group_or">
             <img/>
           </div>
-          <button ion-button [ngClass]="{'button-inactive': user.gender==1}" (click)="sexClick(0)">Man</button>
+          <button ion-button [ngClass]="{'button-inactive': dataProvider.user.gender==1}" (click)="sexClick(0)">Man</button>
         </div>
     </ion-row>
     <ion-row>
@@ -32,28 +32,24 @@
     <ion-row>
       <p>First Name</p>
       <ion-item no-lines>
-        <ion-input type="text" [(ngModel)]="user.fname" placeholder="Type here"></ion-input>
+        <ion-input type="text" [(ngModel)]="dataProvider.user.fname" placeholder="Type here"></ion-input>
       </ion-item>
     </ion-row>
     <ion-row>
       <p>Last Name</p>
       <ion-item no-lines>
-        <ion-input type="text" [(ngModel)]="user.lname" placeholder="Type here"></ion-input>
+        <ion-input type="text" [(ngModel)]="dataProvider.user.lname" placeholder="Type here"></ion-input>
       </ion-item>
     </ion-row>
     <ion-row>
       <p>When’s your birthday?</p>
       <ion-item no-lines>
-        <!-- <ion-select [(ngModel)]="birthday" placeholder="Choose your birthday" interface="popover" col></ion-select> -->
-        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="user.birthdate"></ion-datetime>
+        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="dataProvider.user.birthdate"></ion-datetime>
       </ion-item>
     </ion-row>
     <ion-row>
       <p>Homeland</p>
-      <ion-item no-lines>
-        <ion-select [(ngModel)]="user.country" placeholder="Choose your country" interface="popover" col>
-          <ion-option *ngFor="let code of country_list; let i=index;" value="{{code.code}}">{{code.name}}</ion-option>
-        </ion-select>
+      <ion-item no-lines (click)="homelandClick()">{{country_list[dataProvider.user.country]}}
       </ion-item>
     </ion-row>
     <ion-row>
