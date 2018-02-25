@@ -6,6 +6,16 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
-
+<ion-content>
+  <ion-item class="passenger-image">
+    <img tappable/>
+  </ion-item>
+  <ion-list no-lines>
+    <button ion-item *ngFor="let passenger of passengers" (click)="passengerSelected(passenger)">
+      {{ passenger }}
+    </button> 
+  </ion-list>
+  <ion-label class="pay-now-button">
+    <button ion-button (click)="payNow()">Pay Now</button>
+  </ion-label>
 </ion-content>

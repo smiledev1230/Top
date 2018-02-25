@@ -1,3 +1,34 @@
 page-passenger {
-
+    .scroll-content {
+        background-color: white;
+        .passenger-image {
+            background-color: $content-color;
+            ion-label{
+                text-align: center;
+                margin-bottom: 0px;
+                img {
+                    content: url(../assets/imgs/passengers.png);
+                    height: 80px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        ion-list {
+            .item {
+                color: $title-color;
+            }
+            .item:nth-child(even){
+                background-color: $content-color;
+            }
+        }
+        .pay-now-button {
+            text-align: center;
+            margin-left: 8px;
+            .button {
+                min-width: 300px;
+                background-color: #378493;
+                font-size: 18px;
+            }
+        }
+    }
 }
