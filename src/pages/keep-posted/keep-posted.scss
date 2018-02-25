@@ -1,3 +1,47 @@
 page-keep-posted {
-
+    .scroll-content {
+        ion-list ion-item {
+            background-color: $content-color;
+            text-align: center;
+            ion-label {
+                margin: 0px 8px;
+            }
+            .post-image {
+                content: url(../assets/imgs/keep-posted.png);
+                border-radius: 10px;
+                box-shadow: 2px 4px 4px 4px #e7e7e7;
+            }
+            .keep-me-posted {
+                font-size: 24px;
+                color: #111;
+            }
+            .arrow-bottom-image {
+                content: url(../assets/imgs/arrow-bottom.png);
+            }
+        }
+        .keep-posted-bottom {
+            background : url(../assets/imgs/heart-background.png) no-repeat center center;
+            background-size: 170px;
+            background-position-y: 0px;
+            ion-item {
+                background: transparent;
+            }
+            .keep-posted-label{
+                ion-label {
+                    color: $label-color;
+                    font-size: 20px;
+                    white-space: normal;
+                    margin: 13vh auto 8vh;
+                    max-width: 300px;
+                }
+            }
+            .keep-button-group {
+                font-size: 36px;
+                color: #b64f65;
+                ion-label:first-child {
+                    color: #378493;
+                }
+            }
+        }
+    }
 }

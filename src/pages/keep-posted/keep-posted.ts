@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { LocationApprovalPage } from '../location-approval/location-approval';
 
 @Component({
   selector: 'page-keep-posted',
@@ -14,7 +15,11 @@ export class KeepPostedPage {
     console.log('ionViewDidLoad KeepPostedPage');
   }
 
+  keepSelected() {
+    this.navCtrl.push(LocationApprovalPage);
+  }
+  
   nextPage() {
-
+    this.navCtrl.push(LocationApprovalPage);
   }
 }

@@ -17,6 +17,7 @@ import { PassengerPage } from '../pages/passenger/passenger';
 import { KeepPostedPage } from '../pages/keep-posted/keep-posted';
 import { CountryCodePage } from '../pages/country-code/country-code';
 import { HomelandPage } from '../pages/homeland/homeland';
+import { LocationApprovalPage } from '../pages/location-approval/location-approval';
 
 import { LoginProvider } from '../providers/login';
 import { ConfigProvider } from '../providers/config';
@@ -37,7 +38,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     PassengerPage,
     KeepPostedPage,
     CountryCodePage,
-    HomelandPage
+    HomelandPage,
+    LocationApprovalPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     PassengerPage,
     KeepPostedPage,
     CountryCodePage,
-    HomelandPage
+    HomelandPage,
+    LocationApprovalPage
   ],
   providers: [
     StatusBar,

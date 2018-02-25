@@ -1,0 +1,39 @@
+page-location-approval {
+    .scroll-content {
+        ion-list {
+            height: 65vh;
+            background-color: #2869b4;
+            border-radius: 10px;
+            margin: 1vh 2vw;
+            position: relative;
+            min-height: 280px;
+            ion-item {
+                background: transparent;
+                text-align: center;
+                color: white;
+                .location-label {
+                    font-size: 30px;
+                    margin-top: 8vh;
+                }
+                .setting-label {
+                    font-size: 16px;
+                    white-space: normal;
+                    max-width: 240px;
+                    margin: 20px auto;
+                }
+            }
+            .go-button {
+                position: absolute;
+                bottom: 8vh;
+                left: 9%;
+                right: 9%;
+                padding: 20px 0px;
+                border-radius: 25px;
+                height: 50px;
+                font-size: 13px;
+                width: 230px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
