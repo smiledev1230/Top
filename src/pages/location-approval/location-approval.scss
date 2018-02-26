@@ -1,6 +1,6 @@
 page-location-approval {
     .scroll-content {
-        background: #f7f8f8 url(../assets/imgs/map-background.png) no-repeat center bottom;
+        background: #f7f8f8 url(../assets/imgs/map-bg.png) no-repeat center bottom;
         background-size: 100% auto;
         ion-list {
             height: 65vh;
@@ -37,6 +37,7 @@ page-location-approval {
                 font-size: 13px;
                 width: 230px;
                 margin: 0 auto;
+                background-color: #fff;
             }
         }
     }
