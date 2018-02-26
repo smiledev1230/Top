@@ -1,3 +1,111 @@
 page-home {
-
+    .fixed-content, .scroll-content .home-content {
+        padding: 0px !important;
+        background: url(../assets/imgs/home/home-map.png) no-repeat center bottom;
+        background-size: 100%;
+        height: 100%;
+        ion-item {
+            background: transparent;
+        }        
+        .top-icon-group {
+            height: 50%;
+            background: url(../assets/imgs/home/home-woman.png) no-repeat;
+            background-size: 100% auto;
+            ion-item {
+                padding: 16px 0px 16px 16px;
+                .home-menu {
+                    content: url(../assets/icon/home-menu.png);
+                    height: 32px;
+                }
+                .home-inbox {
+                    content: url(../assets/icon/home-inbox.png);
+                    height: 32px;
+                    float: right;
+                }
+            }
+        }
+        .grid-content {
+            min-height: 150px;
+            background: url(../assets/imgs/shape.png) no-repeat;
+            background-size: 100% 100%;
+            margin-top: -5vh;
+            padding: 5px 0px;
+            .home-refresh {
+                position: relative;
+                padding: 4vh 16px 0px;
+                img {
+                    content: url(../assets/icon/home-refresh.png);
+                    height: 32px;
+                    position: absolute;
+                }
+                .toolbar-title {
+                    font-size: 24px;
+                    font-weight: 300;
+                    color: #111111;
+                    p {
+                        font-size: 14px;
+                        margin: 0px;
+                        font-weight: initial; 
+                    }
+                }
+            }
+            .swipe-group {
+                text-align: center;
+                width: 280px;
+                height: 40px;
+                margin: 16px auto;
+                padding: 3px;
+                background: linear-gradient(to right,#fff 0%, #55b5e8 100%);
+                .swipe-text {
+                    font-size: 13px;
+                    line-height: 25px;
+                    text-align: right;
+                }
+                .swipe-title {
+                    font-size: 22px;
+                    font-family: "Roboto";
+                    font-weight: bold;
+                    color: #fff;
+                }
+                img {
+                    content: url(../assets/icon/home-swipe.png);
+                    height: 18px;
+                    padding-top: 5px;
+                }
+            }
+            .swipe-group.swipe-left {
+                margin-top: 0px;
+                background: linear-gradient(to left,#fff 0%, #b54d62 100%);
+                .swipe-text {
+                    text-align: left;
+                }                
+            }
+            .united-airline {
+                content: url(../assets/imgs/home/united-airline.png);
+                height: 50px;
+                margin: 0px auto 10px;
+            }
+            // .home-bottom {
+            //     background: url(../assets/imgs/home/home-map.png) no-repeat;
+            //     background-size: 100% auto;
+            //     height: 125px;
+            // }
+        }
+        .home-bottom {
+            min-height: 50px;
+            ion-label {
+                margin-bottom: 0px;
+            }        
+            .ribbon-star1 {
+                content: url(../assets/imgs/home/ribbon-star1.png);
+                height: 80px;
+                float: left;
+            }
+            .ribbon-star2 {
+                content: url(../assets/imgs/home/ribbon-star2.png);
+                height: 80px;
+                float: right;
+            }            
+        }
+    }
 }
