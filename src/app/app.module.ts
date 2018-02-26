@@ -8,6 +8,10 @@ import { LinkedIn } from '@ionic-native/linkedin';
 import { MyApp } from './app.component';
 // Import Pages
 import { HomePage } from '../pages/home/home';
+import { ProfilePage } from '../pages/profile/profile';
+import { LocationPage } from '../pages/location/location';
+import { InboxPage } from '../pages/inbox/inbox';
+import { TopupPage } from '../pages/topup/topup';
 import { LoginPage } from '../pages/login/login';
 import { EnterPhonePage } from '../pages/enter-phone/enter-phone';
 import { VerifyPinPage } from '../pages/verify-pin/verify-pin';
@@ -30,6 +34,10 @@ import { StatusBar } from '@ionic-native/status-bar';
   declarations: [
     MyApp,
     HomePage,
+    ProfilePage,
+    LocationPage,
+    InboxPage,
+    TopupPage,
     LoginPage,
     EnterPhonePage,
     VerifyPinPage,
@@ -50,6 +58,10 @@ import { StatusBar } from '@ionic-native/status-bar';
   entryComponents: [
     MyApp,
     HomePage,
+    ProfilePage,
+    LocationPage,
+    InboxPage,
+    TopupPage,
     LoginPage,
     EnterPhonePage,
     VerifyPinPage,

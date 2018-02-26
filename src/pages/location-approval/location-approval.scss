@@ -1,8 +1,12 @@
 page-location-approval {
     .scroll-content {
+        background: #f7f8f8 url(../assets/imgs/map-background.png) no-repeat center bottom;
+        background-size: 100% auto;
         ion-list {
             height: 65vh;
-            background-color: #2869b4;
+            background: #2869b4 url(../assets/imgs/hand-up.png) no-repeat right bottom;
+            background-position-x: calc(100% - 20px);
+            background-size: auto 50%;
             border-radius: 10px;
             margin: 1vh 2vw;
             position: relative;
