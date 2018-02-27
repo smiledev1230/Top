@@ -2,8 +2,8 @@
   <div class="home-content">
     <div class="top-icon-group">
       <ion-item no-lines>
-        <img class="home-menu" tappable/>
-        <img class="home-inbox" tappable/>
+        <img class="home-menu" tappable (click)="goToProfile()"/>
+        <img class="home-inbox" tappable (click)="goToInbox()"/>
       </ion-item>
     </div>
     <ion-grid class="grid-content">
@@ -29,8 +29,8 @@
     </ion-grid>
     <div class="home-bottom">
       <ion-item no-lines>
-        <img class="ribbon-star1" tappable/>
-        <img class="ribbon-star2" tappable/>
+        <img class="ribbon-star1" tappable (click)="goToLocation()"/>
+        <img class="ribbon-star2" tappable (click)="showTopup()"/>
       </ion-item>    
     </div>
   </div>

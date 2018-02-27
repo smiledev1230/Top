@@ -1,3 +1,32 @@
 page-location {
-
+    ion-content.content .scroll-content{
+        background-color: #fefefe;
+        padding: 16px 0px !important;
+        ion-list {
+            ion-searchbar.searchbar {
+                background: transparent;
+                padding: 0 16px;
+                .searchbar-input {
+                    background-color: #f5f5f5;
+                    border-radius: 15px;
+                }
+            }
+            ion-item {
+                border-bottom: 0.55px solid #c8c7cc;
+                .item-inner {
+                    border-bottom: 0px;
+                }
+                .location-info {
+                    padding-right: 20px;
+                    ion-icon {
+                        position: absolute;
+                        right: 10px;
+                        top: 8px;
+                        font-size: 50px;
+                        color: #398594;
+                    }
+                }
+            }
+        }
+    }
 }

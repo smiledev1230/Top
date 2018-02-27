@@ -27,6 +27,8 @@ import { LoginProvider } from '../providers/login';
 import { ConfigProvider } from '../providers/config';
 import { DataProvider } from '../providers/data';
 
+import { LocationPipe } from '../pipes/location';
+
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
@@ -47,7 +49,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     KeepPostedPage,
     CountryCodePage,
     HomelandPage,
-    LocationApprovalPage
+    LocationApprovalPage,
+    LocationPipe
   ],
   imports: [
     BrowserModule,
