@@ -27,4 +27,11 @@ page-location {
             }
         }
     }
+    .location-button {
+        content: url(../assets/icon/location-button.png);
+        position: absolute;
+        height: 80px;
+        bottom: 20px;
+        right: 20px;
+    }
 }
