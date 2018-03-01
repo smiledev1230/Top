@@ -16,16 +16,14 @@ page-location {
                 .item-inner {
                     border-bottom: 0px;
                 }
-                .location-info {
-                    padding-right: 20px;
-                    ion-icon {
-                        position: absolute;
-                        right: 10px;
-                        top: 8px;
-                        font-size: 50px;
-                        color: #398594;
-                    }
-                }
+            }
+            .item.item-radio-checked .item-inner ion-label {
+                color: $title-color;
+            }
+            .radio-checked .radio-inner {
+                border-color: #398594;
+                height: 20px;
+                width: 8px;
             }
         }
     }

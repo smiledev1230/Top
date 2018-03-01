@@ -5,14 +5,11 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list class="loction-list" *ngIf="locations && locations.length > 0">
+  <ion-list radio-group *ngIf="locations && locations.length > 0" [(ngModel)]="location_id" (ngModelChange)="selectLocation(location_id)" class="loction-list">
     <ion-searchbar [(ngModel)]="searchLocation" placeholder="Search"></ion-searchbar>
     <ion-item *ngFor="let location of locations | locationFilter:searchLocation" tappable>
-      <div class="location-info">
-        <span>{{location.name}}</span>
-        <p>{{location.position}}</p>
-        <ion-icon name="checkmark" md="md-checkmark"></ion-icon>
-      </div>
+      <ion-label>{{location.name}}<p>{{location.position}}</p></ion-label>
+      <ion-radio value="{{location.id}}" [checked]="location.id == location_id"></ion-radio>
     </ion-item>
   </ion-list>
 </ion-content>

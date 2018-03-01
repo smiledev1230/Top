@@ -12,7 +12,7 @@ export class LocationPipe implements PipeTransform {
       return locations;
     } else {
       let term = search.toLowerCase();
-      return locations.filter(location => location.name.toLowerCase().indexOf(term) > -1 && location.position.toLowerCase().indexOf(term) > -1);
+      return locations.filter(location => location.name.toLowerCase().indexOf(term) > -1 || location.position.toLowerCase().indexOf(term) > -1);
     }
   }
 }
