@@ -1,11 +1,23 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>inbox</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 <ion-content padding>
-
+  <ion-label class="sub-title">Matchs</ion-label>
+  <!-- Show calls -->
+  <ion-list class="inbox-list" *ngIf="inboxes && inboxes.length > 0">
+    <ion-item-sliding *ngFor="let inbox of inboxes">
+      <ion-item-options side="left">
+        <button class="delete-button" ion-button tappable (click)="deleteConversation(inbox.userId)"><ion-icon name="custom-delete"></ion-icon></button>
+      </ion-item-options>
+      <ion-item no-lines tappable>  
+        <ion-avatar item-left>
+          <img src="{{inbox.avatar}}" (click)="goToProfile(inbox.userId)">
+        </ion-avatar>
+        <ion-label (click)="goToMessage(inbox.userId)">{{inbox.name}}</ion-label>
+        <img src="{{inbox.image}}" class="honey-moon" item-right (click)="goToSettingDate(inbox.userId)"/>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

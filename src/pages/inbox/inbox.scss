@@ -1,3 +1,32 @@
 page-inbox {
-
+    .fixed-content, .scroll-content {
+        padding: 0px !important;
+        .sub-title {
+            font-size: 14px;
+            color: $title-color;
+            padding-left: 16px;
+        }
+        .inbox-list {
+            border-top: 0.55px solid #c8c7cc;
+            ion-item-sliding ion-item.item {
+                border-bottom: 0.55px solid #c8c7cc;
+                border-width: 0.55px;
+                .honey-moon {
+                    height: 30px;
+                }
+            }
+            .delete-button {
+                background-color: #b54c62;
+                padding: 13px;
+                ion-icon {
+                    content: url(../assets/imgs/inbox/inbox-delete.png);
+                    width: 20px;
+                    height: 30px;
+                }
+            }
+            ion-item-sliding.active-slide, ion-item-sliding.active-slide .item-ios{
+                background-color: #FFFFFF;
+            }            
+        }
+    }
 }
