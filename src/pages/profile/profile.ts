@@ -14,4 +14,7 @@ export class ProfilePage {
     console.log('ionViewDidLoad ProfilePage');
   }
 
+  goToHome() {
+    this.navCtrl.pop();
+  }
 }

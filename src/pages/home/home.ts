@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { InboxPage } from '../inbox/inbox';
 import { LocationPage } from '../location/location';
@@ -11,7 +11,7 @@ import { TopupPage } from '../topup/topup';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -29,8 +29,17 @@ export class HomePage {
   goToLocation() {
     this.navCtrl.push(LocationPage);
   }
-  
+
+  homeRefresh() {
+    this.navCtrl.setRoot(this.navCtrl.getActive().component);
+  }
+
   showTopup() {
-    this.navCtrl.push(TopupPage);
+    let topupModal = this.modalCtrl.create(TopupPage, {showBackdrop:true, enableBackdropDismiss:false});
+    topupModal.present();
+    topupModal.onDidDismiss(data => {
+
+      },
+    );
   }
 }

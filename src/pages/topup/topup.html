@@ -1,12 +1,14 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>topup</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
 <ion-content padding>
-
+  <div class="topup-modal">
+    <img class="heart" tappable/>
+    <div>
+      <ion-label class="topup-title">You Have TopSwipe</ion-label>
+      <ion-label class="topup-subtitle">Miss MJ, we hope its a match!</ion-label>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="topup-buttons">
+      <button ion-button tappable class="left-button" (click)="set()">YES</button>
+      <button ion-button tappable class="right-button" (click)="cancel()">No</button>
+    </div>
+  </div>
 </ion-content>

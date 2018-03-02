@@ -1,3 +1,67 @@
 page-topup {
+    ion-content {
+        height: 340px;
+        width: 80vw;
+        max-width: 300px;
+        margin: 16vh auto;
+        position: relative !important;
+        background-color: transparent !important;
+        .fixed-content, .scroll-content {
+            background-color: transparent;
+            padding: 0px !important;
+            .topup-modal {
+                background-color: #fff !important;
+                border-radius: 10px;
+                overflow: hidden;
+                text-align: center;
+                padding: 16px;
+                padding-bottom: 28px;
+                .heart {
+                    content: url(../assets/imgs/heart.png);
+                    height: 100px;
+                }
+                .topup-title {
+                    color: #0085ff;
+                    font-size: 20px;
+                }
+                .topup-subtitle {
+                    color: #000;
+                    font-size: 16px;
+                }
+                .topup-buttons {
+                    position: absolute;
+                    width: 100%;
+                    left: 0px;
+                    button {
+                        width: 100px;
+                        border-radius: 22px;
+                        margin: 0.4rem 0.4rem;
+                    }
+                    .left-button {
+                        background-color: #378493;
+                        box-shadow: 0px 0px 2px 2px #338d9e;
+                    }
+                    .right-button {
+                        background-color: #ffffff;
+                        color: #b64f64;
+                        box-shadow: 0px 0px 2px 2px #e6e4e4;
+                    }
+                }
+            }
+        }
 
+    }
+}
+ion-modal.page-topup {
+    ion-backdrop {
+        visibility: visible !important;
+        z-index:0;
+        opacity: 0.7 !important;
+    }
+    .modal-wrapper page-topup .topup-modal .modal {
+        $modal-inset-min-width:0;
+        $modal-inset-min-height-small:0;
+        display: flex;
+        height: auto;
+    }
 }

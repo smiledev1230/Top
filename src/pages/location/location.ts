@@ -28,4 +28,8 @@ export class LocationPage {
   selectLocation(location_id) {
     this.location_id = location_id;
   }
+
+  goLocation() {
+    this.navCtrl.pop();
+  }
 }

@@ -1,3 +1,59 @@
 page-profile {
-
+    .fixed-content, .scroll-content .profile-content {
+        padding: 0px !important;
+        height: 100%;
+        background-color: #fff;
+        ion-item {
+            background: transparent;
+        }        
+        .top-icon-group {
+            height: 50%;
+            background: url(../assets/imgs/profile/profile-woman.png) no-repeat;
+            background-size: 100% auto;
+            ion-item {
+                padding: 16px 0px 16px 16px;
+                .profile-back {
+                    display: inline-block;
+                    padding-top: 4px;
+                }
+                .profile-star {
+                    content: url(../assets/imgs/profile/profile-star.png);
+                    height: 32px;
+                    float: right;
+                }
+            }
+        }
+        .grid-content {
+            min-height: 150px;
+            background: url(../assets/imgs/shape.png) no-repeat;
+            background-size: 100% 100%;
+            margin-top: -5vh;
+            padding: 5px 0px;
+            text-align: center;
+            background-position-y: 20px;
+            .profile-setting {
+                content: url(../assets/imgs/profile/profile-setting.png);
+            }
+            .profile-dot {
+                content: url(../assets/imgs/profile/profile-dot.png);
+            }
+            .profile-edit {
+                content: url(../assets/imgs/profile/profile-edit.png);
+            }
+            ion-title .toolbar-title{
+                padding-top: 20px;
+                font-size: 24px;
+                color: #111111;
+                p {
+                    margin-top: 0px;
+                    font-size: 14px;
+                }
+            }
+            .united-airline {
+                content: url(../assets/imgs/home/united-airline.png);
+                height: 50px;
+                margin: 0px auto 10px;
+            }
+        }
+    }
 }

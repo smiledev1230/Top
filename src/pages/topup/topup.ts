@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, Renderer } from '@angular/core';
+import { ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'page-topup',
@@ -7,11 +7,20 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class TopupPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public renderer: Renderer, public viewCtrl: ViewController) {
+    this.renderer.setElementClass(viewCtrl.pageRef().nativeElement, 'page-topup', true);
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TopupPage');
   }
 
+  set() {
+    this.viewCtrl.dismiss('yes');
+  }
+
+  cancel() {
+    this.viewCtrl.dismiss('no');
+  }
 }
