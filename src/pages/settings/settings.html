@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <div class="title-logo"></div>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only tappable (click)="saveSettings()"><ion-icon class="shutdown-button"></ion-icon></button>
+    </ion-buttons>    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label class="sub-title">Discovery Settings</ion-label>
+  <ion-card>
+    <ion-card-header>Location</ion-card-header>
+    <ion-item no-lines (click)="selectLocation()" class="select-location">{{dataProvider.user['user_geolocation_city']}}</ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Maximum distance</ion-card-header>
+    <ion-item>
+      <ion-range min="0" max="100" [(ngModel)]="dataProvider.user.user_geolocation_range" class="distance-range">
+      </ion-range>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Gender - looking for</ion-card-header>
+    <ion-item>
+      <ion-row class="gender-group">
+        <ion-col>Man</ion-col>
+        <ion-col>Women</ion-col>
+        <ion-col>Both</ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-card>
+  <div class="age-range">
+    <ion-label>Age range</ion-label>
+    <ion-range dualKnobs="true" pin="true" [(ngModel)]="ageRange" (ionChange)="ageSelect($event)" color="dark">
+      <ion-label range-left>-0</ion-label>
+      <ion-label range-right>100</ion-label>
+    </ion-range>
+  </div>
+</ion-content>

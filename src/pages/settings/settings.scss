@@ -1,0 +1,83 @@
+page-settings {
+    .shutdown-button {
+        content: url(../assets/icon/shutdown-button.png);
+        height: 32px;
+        margin-right: 8px;
+    }
+    .fixed-content, .scroll-content {
+        padding: 0px !important;
+        .sub-title {
+            font-size: 14px;
+            color: $title-color;
+            padding-left: 16px;
+        }
+        ion-card-header {
+            text-align: center;
+            padding-bottom: 0px;
+        }
+        .select-location {
+            text-align: center;
+            color: $label-color;
+            font-size: 18px;
+        }
+        .distance-range {
+            .range-slider {
+                .range-bar {
+                    height: 6px;
+                    border-radius: 3px;
+                }
+                .range-bar-active {
+                    background: #378493;
+                }
+                .range-knob {
+                    content: url(../assets/imgs/settings/range-knob.png);
+                    box-shadow: none;
+                    background: transparent;
+                    top: 10px;
+                }
+            }
+        }
+        .gender-group {
+            text-align: center;
+            font-size: 14px;
+            color: $label-color;
+            ion-col {
+                margin: 5px 15px;
+                background: url(../assets/imgs/settings/gender-bg.png) 100% 100% no-repeat;
+                background-size: 100%;
+            }
+        }
+        .age-range {
+            margin: 12px;
+            border-radius: 2px;
+            width: calc(100% - 24px);
+            font-size: 1.4rem;
+            background: #fff;
+            -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #333;
+            ion-label {
+                padding-top: 20px;
+                margin-bottom: 0px;
+            }
+            ion-range {
+                .range-slider {
+                    .range-bar {
+                        height: 6px;
+                        border-radius: 3px;
+                    }
+                    .range-bar-active {
+                        background: #378493;
+                    }
+                    .range-knob {
+                        content: url(../assets/imgs/settings/range-knob.png);
+                        box-shadow: none;
+                        background: transparent;
+                        top: 10px;
+                    }
+                }
+            }
+        }
+    }    
+}
