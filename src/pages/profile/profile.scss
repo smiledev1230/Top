@@ -7,7 +7,7 @@ page-profile {
             background: transparent;
         }        
         .top-icon-group {
-            height: 50%;
+            height: 55%;
             background: url(../assets/imgs/profile/profile-woman.png) no-repeat;
             background-size: 100% auto;
             ion-item {
@@ -27,18 +27,19 @@ page-profile {
             min-height: 150px;
             background: url(../assets/imgs/shape.png) no-repeat;
             background-size: 100% 100%;
-            margin-top: -5vh;
-            padding: 5px 0px;
+            margin-top: -8vh;
             text-align: center;
-            background-position-y: 20px;
+            color: #000;
             .profile-setting {
                 content: url(../assets/imgs/profile/profile-setting.png);
+                margin-top: -10px;
             }
             .profile-dot {
                 content: url(../assets/imgs/profile/profile-dot.png);
             }
             .profile-edit {
                 content: url(../assets/imgs/profile/profile-edit.png);
+                margin-top: -10px;
             }
             ion-title .toolbar-title{
                 padding-top: 20px;
@@ -47,12 +48,41 @@ page-profile {
                 p {
                     margin-top: 0px;
                     font-size: 14px;
+                    font-family: sans-serif;
+                    font-weight: 300;
                 }
             }
             .united-airline {
                 content: url(../assets/imgs/home/united-airline.png);
-                height: 50px;
-                margin: 0px auto 10px;
+                height: 8vh;
+                margin: 50px auto 10px;
+            }
+            .user-info {
+                border-bottom: 1px solid #f2f2f2;
+                border-top: 1px solid #f2f2f2;
+                font-family: sans-serif;
+                .col {
+                    margin: 10px 5px;
+                    padding: 0px;
+                }
+                .col:nth-child(2) {
+                    border-left: 2px solid #f2f2f2;
+                    border-right: 2px solid #f2f2f2;
+                    border-left-style: dashed;
+                    border-right-style: dashed;
+                }
+                h2 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin: 10px 0px 0px;
+                }
+                p {
+                    margin: 0px 0px 5px;
+                    font-size: 14px;
+                }
+                .smoking-image {
+                    height: 35px;
+                }
             }
         }
     }

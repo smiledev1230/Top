@@ -1,26 +1,46 @@
 <ion-content>
-    <div class="profile-content">
-      <div class="top-icon-group">
-        <ion-item no-lines>
-          <p class="profile-back" tappable (click)="goToHome()">Back</p>
-          <img class="profile-star" tappable/>
-        </ion-item>
-      </div>
-      <ion-grid class="grid-content">
-        <ion-row class="profile-buttons">
-          <ion-col><img class="profile-setting" tappable/></ion-col>
-          <ion-col>
-            <img class="profile-dot" tappable/>
-            <ion-title>
-              A.S<p>Tel Aviv</p>
-            </ion-title>
-          </ion-col>
-          <ion-col><img class="profile-edit" tappable/></ion-col>
-        </ion-row>
-        <ion-row>
-          <img class="united-airline">
-        </ion-row>
-      </ion-grid>
+  <div class="profile-content">
+    <div class="top-icon-group">
+      <ion-item no-lines>
+        <p class="profile-back" tappable (click)="goToHome()">Back</p>
+        <img class="profile-star" tappable/>
+      </ion-item>
     </div>
-  </ion-content>
+    <ion-grid class="grid-content">
+      <ion-row class="profile-buttons">
+        <ion-col><img class="profile-setting" tappable (click)="goToSettings()"/></ion-col>
+        <ion-col>
+          <img class="profile-dot" tappable/>
+          <ion-title>
+            A.S<p>Tel Aviv</p>
+          </ion-title>
+        </ion-col>
+        <ion-col><img class="profile-edit" tappable (click)="goToEdit()"/></ion-col>
+      </ion-row>
+      <ion-row class="user-info">
+        <ion-col>
+          <div>
+            <h2>23</h2>
+            <p>Years</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <img src="{{is_smoking}}" class="smoking-image">
+            <p>Not Smoking</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <h2>137</h2>
+            <p>Miles Away</p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <img class="united-airline">
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
   

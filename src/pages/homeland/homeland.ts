@@ -7,22 +7,17 @@ import { DataProvider } from '../../providers/data';
   templateUrl: 'homeland.html',
 })
 export class HomelandPage {
-  public country_codes:any;
+  public country_list: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataProvider: DataProvider) {
-    this.getCountryCode();
+    this.country_list = this.dataProvider.user.user_geolocation_city;
   }
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomelandPage');
   }
 
-  getCountryCode() {
-    this.dataProvider.getCountryCode().then(response=>{
-      this.country_codes = response;
-    });
-  }
-  selectCountyCode(code) {
-    this.dataProvider.user.country = code;
+  selectCountyCode(country_name) {
+    this.dataProvider.user.​user_geolocation_city = country_name;
     this.navCtrl.pop();
   }
 }

@@ -18,12 +18,12 @@ export class RegisterPage {
   }
   
   ionViewDidLoad() {
-    console.log(this.dataProvider.user);
-    this.dataProvider.getCountryCode().then(response=>{
-      for (let i in response) {
-        this.country_list[response[i]['code']] = response[i]['name'];
-      }
-    });
+    console.log('ionViewDidLoad RegisterPage');
+    // this.dataProvider.getCountryCode().then(response=>{
+    //   for (let i in response) {
+    //     this.country_list[response[i]['code']] = response[i]['name'];
+    //   }
+    // });
   }
 
   sexClick(gender) {

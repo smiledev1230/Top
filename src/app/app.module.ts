@@ -24,6 +24,8 @@ import { HomelandPage } from '../pages/homeland/homeland';
 import { LocationApprovalPage } from '../pages/location-approval/location-approval';
 import { MessagePage } from '../pages/message/message';
 import { SettingDatePage } from '../pages/setting-date/setting-date';
+import { SettingsPage } from '../pages/settings/settings';
+import { EditPage } from '../pages/edit/edit';
 
 import { LoginProvider } from '../providers/login';
 import { ConfigProvider } from '../providers/config';
@@ -54,7 +56,9 @@ import { StatusBar } from '@ionic-native/status-bar';
     LocationApprovalPage,
     LocationPipe,
     MessagePage,
-    SettingDatePage
+    SettingDatePage,
+    SettingsPage,
+    EditPage
   ],
   imports: [
     BrowserModule,
@@ -80,7 +84,9 @@ import { StatusBar } from '@ionic-native/status-bar';
     HomelandPage,
     LocationApprovalPage,
     MessagePage,
-    SettingDatePage
+    SettingDatePage,
+    SettingsPage,
+    EditPage
   ],
   providers: [
     StatusBar,

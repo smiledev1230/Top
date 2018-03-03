@@ -7,22 +7,17 @@ import { DataProvider } from '../../providers/data';
   templateUrl: 'country-code.html',
 })
 export class CountryCodePage {
-  public country_codes:any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataProvider: DataProvider) {
-    this.getCountryCode();
   }
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad CountryCodePage');
   }
 
-  getCountryCode() {
-    this.dataProvider.getCountryCode().then(response=>{
-      this.country_codes = response;
-    });
-  }
-  selectCountyCode(code) {
-    this.dataProvider.user.country_code = code;
+  selectCountyCode() {
+    let selectedCode = this.dataProvider.getSelectedCode(this.dataProvider.user.country_code);
+    this.dataProvider.user.country = selectedCode['dial_code'];
     this.navCtrl.pop();
   }
 }

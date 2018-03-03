@@ -21,9 +21,9 @@
     <ion-row>
         <p class="title-text">Interested in…</p>
         <ion-row class="interest-group">
-          <ion-col class="sex-women"><img (click)="interestClick(1)"/><p>WOMEN</p></ion-col>
-          <ion-col class="sex-man"><img (click)="interestClick(2)"/><p>MAN</p></ion-col>
-          <ion-col class="sex-both"><img (click)="interestClick(3)"/><p>BOTH</p></ion-col>
+          <ion-col class="sex-women"><img (click)="interestClick(1)" [ngClass]="{'circle-active': dataProvider.user.interested_in==1}"/><p>WOMEN</p></ion-col>
+          <ion-col class="sex-man"><img (click)="interestClick(2)" [ngClass]="{'circle-active': dataProvider.user.interested_in==2}"/><p>MAN</p></ion-col>
+          <ion-col class="sex-both"><img (click)="interestClick(3)" [ngClass]="{'circle-active': dataProvider.user.interested_in==3}"/><p>BOTH</p></ion-col>
         </ion-row>
         <div class="interest-title"><p>We will never reveal your name on your behalf, only initials on Top</p></div>
     </ion-row>
@@ -49,7 +49,7 @@
     </ion-row>
     <ion-row>
       <p>Homeland</p>
-      <ion-item no-lines (click)="homelandClick()">{{country_list[dataProvider.user.country]}}
+      <ion-item no-lines (click)="homelandClick()">{{dataProvider.user.user_geolocation_city}}
       </ion-item>
     </ion-row>
     <ion-row>
