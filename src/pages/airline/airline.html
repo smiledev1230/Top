@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Choose Airline</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list radio-group *ngIf="dataProvider.airline_list && dataProvider.airline_list.length > 0" [(ngModel)]="airline_id" (ngModelChange)="selectAirline(airline_id)" class="loction-list">
+    <ion-searchbar [(ngModel)]="searchAirline" placeholder="Search"></ion-searchbar>
+    <ion-item *ngFor="let airline of dataProvider.airline_list | airlineFilter:searchAirline" tappable>
+      <ion-label><img [(src)] ="airline.icon"/></ion-label>
+      <ion-label>{{airline.name}}</ion-label>
+      <ion-radio value="{{airline.id}}" [checked]="airline.id == airline_id"></ion-radio>
+    </ion-item>
+  </ion-list>
+</ion-content>

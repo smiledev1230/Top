@@ -15,28 +15,40 @@
     <ion-card-header>Location</ion-card-header>
     <ion-item no-lines (click)="selectLocation()" class="select-location">{{dataProvider.user['user_geolocation_city']}}</ion-item>
   </ion-card>
-  <ion-card>
-    <ion-card-header>Maximum distance</ion-card-header>
-    <ion-item>
-      <ion-range min="0" max="100" [(ngModel)]="dataProvider.user.user_geolocation_range" class="distance-range">
-      </ion-range>
-    </ion-item>
-  </ion-card>
+  <div class="age-range">
+    <ion-label>Maximum distance</ion-label>
+    <ion-range min="0" max="100" [(ngModel)]="dataProvider.user.user_geolocation_range" pin="true" >
+      <ion-label range-left>0</ion-label>
+      <ion-label range-right>100</ion-label>
+    </ion-range>
+  </div>
   <ion-card>
     <ion-card-header>Gender - looking for</ion-card-header>
     <ion-item>
       <ion-row class="gender-group">
-        <ion-col>Man</ion-col>
-        <ion-col>Women</ion-col>
-        <ion-col>Both</ion-col>
+        <ion-col width-33 [ngClass]="{'actived-gender':dataProvider.user.gender == 2}"><img (click)="genderClick(2)" /><span (click)="genderClick(2)" >Man</span></ion-col>
+        <ion-col width-33 [ngClass]="{'actived-gender':dataProvider.user.gender == 1}"><img (click)="genderClick(1)" /><span (click)="genderClick(1)" >Women</span></ion-col>
+        <ion-col width-33 [ngClass]="{'actived-gender':dataProvider.user.gender == 3}"><img (click)="genderClick(3)" /><span (click)="genderClick(3)" >Both</span></ion-col>
       </ion-row>
     </ion-item>
   </ion-card>
   <div class="age-range">
     <ion-label>Age range</ion-label>
-    <ion-range dualKnobs="true" pin="true" [(ngModel)]="ageRange" (ionChange)="ageSelect($event)" color="dark">
-      <ion-label range-left>-0</ion-label>
+    <ion-range dualKnobs="true" pin="true" [(ngModel)]="ageRange" (ionChange)="ageSelect($event)" color="dark" min="0" max="100">
+      <ion-label range-left>0</ion-label>
       <ion-label range-right>100</ion-label>
     </ion-range>
   </div>
+  <ion-item class="toggle-group">
+    <ion-label>Show me on "Top"</ion-label>
+    <ion-toggle [(ngModel)]="dataProvider.user.user_avalibility" pulsado checked="false"></ion-toggle>
+  </ion-item>
+  <ion-label class="toggle-label">while turned off you will not be shown</ion-label>
+  <ion-item class="toggle-group">
+    <ion-label>Show me only verified accounts</ion-label>
+    <ion-toggle [(ngModel)]="dataProvider.user.user_preview_only_verified" pulsado checked="false"></ion-toggle>
+  </ion-item>
+  <ion-label class="remove-button">
+    <button ion-button color="primary" full (click)="removeAccount()" tappable>Remove account</button>
+  </ion-label>
 </ion-content>

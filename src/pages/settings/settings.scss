@@ -20,31 +20,31 @@ page-settings {
             color: $label-color;
             font-size: 18px;
         }
-        .distance-range {
-            .range-slider {
-                .range-bar {
-                    height: 6px;
-                    border-radius: 3px;
-                }
-                .range-bar-active {
-                    background: #378493;
-                }
-                .range-knob {
-                    content: url(../assets/imgs/settings/range-knob.png);
-                    box-shadow: none;
-                    background: transparent;
-                    top: 10px;
-                }
-            }
-        }
         .gender-group {
             text-align: center;
             font-size: 14px;
             color: $label-color;
             ion-col {
-                margin: 5px 15px;
-                background: url(../assets/imgs/settings/gender-bg.png) 100% 100% no-repeat;
-                background-size: 100%;
+                img {
+                    content: url(../assets/imgs/settings/gender-bg.png);
+                    align-content: center;
+                    padding: 10px;
+                }
+                span {
+                    position: absolute;
+                    top: 35%;
+                    left: 0px;
+                    right: 0px;
+                    vertical-align: middle;
+                }
+            }
+            .actived-gender {
+                img {
+                    content: url(../assets/imgs/settings/actived-gender.png);
+                }
+                span {
+                    color: #fff;
+                }
             }
         }
         .age-range {
@@ -62,6 +62,18 @@ page-settings {
                 margin-bottom: 0px;
             }
             ion-range {
+                ion-label:first-child {
+                    position: absolute;
+                    top: -12px;
+                    left: 11px;
+                    font-size: 16px;
+                }
+                ion-label:last-child {
+                    position: absolute;
+                    top: -12px;
+                    right: 5px;
+                    font-size: 16px;
+                }                
                 .range-slider {
                     .range-bar {
                         height: 6px;
@@ -76,7 +88,33 @@ page-settings {
                         background: transparent;
                         top: 10px;
                     }
+                    .range-pin {
+                        transform: translate3d(0, 0, 0) scale(1);
+                        font-size: 16px;
+                    }
                 }
+            }
+        }
+        .item.toggle-group {
+            background-color: $content-color;
+            .item-inner {
+                border-bottom: 0px;
+            }
+            ion-toggle .toggle-icon::before, .toggle-checked .toggle-icon {
+                background-color: #378493;
+            }
+        }
+        ion-label.toggle-label {
+            text-align: center;
+            margin: 0px;
+            font-size: 12px;
+        }
+        ion-label.remove-button {
+            margin: 8px 16px;
+            button {
+                background: transparent;
+                border: 1px solid;
+                color: $title-color;
             }
         }
     }    

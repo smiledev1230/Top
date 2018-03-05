@@ -83,4 +83,9 @@ ion-col {
         flex: 0 0 40%;
         max-width: 40%;
     }
+    &[width-33] {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        height: 33.33%;
+    }
 }

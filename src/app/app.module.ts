@@ -26,12 +26,14 @@ import { MessagePage } from '../pages/message/message';
 import { SettingDatePage } from '../pages/setting-date/setting-date';
 import { SettingsPage } from '../pages/settings/settings';
 import { EditPage } from '../pages/edit/edit';
+import { AirlinePage } from '../pages/airline/airline';
 
 import { LoginProvider } from '../providers/login';
 import { ConfigProvider } from '../providers/config';
 import { DataProvider } from '../providers/data';
 
 import { LocationPipe } from '../pipes/location';
+import { AirlinePipe } from '../pipes/airline';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -55,10 +57,12 @@ import { StatusBar } from '@ionic-native/status-bar';
     HomelandPage,
     LocationApprovalPage,
     LocationPipe,
+    AirlinePipe,
     MessagePage,
     SettingDatePage,
     SettingsPage,
-    EditPage
+    EditPage,
+    AirlinePage
   ],
   imports: [
     BrowserModule,
@@ -86,7 +90,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     MessagePage,
     SettingDatePage,
     SettingsPage,
-    EditPage
+    EditPage,
+    AirlinePage
   ],
   providers: [
     StatusBar,

@@ -1,3 +1,58 @@
 page-edit {
-
+    ion-header ion-navbar ion-title .label {
+        font-family: sans-serif;
+    }
+    ion-grid.user-edit {
+        ion-row {
+            ion-item.item {
+                box-shadow: 0px 0px 3px 3px #e7e7e7;
+                .item-inner {
+                    border-bottom: 0px;
+                }
+            }
+            color: $title-color;
+            p {
+                margin-bottom: 5px;
+            }
+            .upload-card {
+                background-color: $content-color;
+                border: 2px solid $border-color;
+                color: $title-color;
+            }
+            textarea.text-input {
+                font-size: 14px;
+            }
+        }
+        .photo-group {
+            img {
+                box-shadow: 0px 0px 3px 3px #e7e7e7;
+            }
+            .user-photo {
+                height: 54vw;
+            }
+        }
+        .smoking-group {
+            ion-col {
+                text-align: center;
+                img{
+                    height: 60px;
+                    border-radius: 100%;
+                    background-color: #e7e7e7; 
+                }
+                .smoking {
+                    content: url(../assets/imgs/profile/smoking-white.png);
+                }
+                .not-smoking {
+                    content: url(../assets/imgs/profile/not-smoking.png);
+                }
+                p {
+                    font-size: 9px;
+                    margin-top: 0px;
+                }
+                .image-active {
+                    background-color: #54b5e8;
+                }
+            }
+        }
+    }
 }

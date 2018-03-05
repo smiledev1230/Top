@@ -13,6 +13,7 @@ export class SettingsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dataProvider: DataProvider) {
     this.ageRange = {lower: dataProvider.user.user_age_range_min, upper: dataProvider.user.user_age_range_max};
+    
   }
   
   ionViewDidLoad() {
@@ -20,7 +21,7 @@ export class SettingsPage {
   }
   
   saveSettings() {
-    
+    this.navCtrl.pop();
   }
   
   ageSelect(ev: any) {
@@ -32,4 +33,11 @@ export class SettingsPage {
     this.navCtrl.push(HomelandPage);
   }
 
+  genderClick(index) {
+    this.dataProvider.user.gender = index;
+  }
+
+  removeAccount() {
+    this.navCtrl.pop();
+  }
 }

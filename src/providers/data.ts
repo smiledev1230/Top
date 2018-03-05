@@ -34,9 +34,11 @@ export class DataProvider {
   }
 
   public country_list: any = [];
+  public airline_list: any = [];
 
   constructor(public http: Http) {
     console.log('Hello DataProvider Provider');
+    this.getAirlineList();
   }
 
   initUser() {
@@ -80,16 +82,6 @@ export class DataProvider {
     });
   }
 
-  // getCode(searchData, type=0) { // if type=0, searching name, type=1, searching dial_code
-  //   for (let i in this.country_list) {
-  //     if (type==0 && searchData == this.country_list[i]['name']) {
-  //       return this.country_list[i]['code'].toLowerCase();
-  //     } else if (type !=0 && searchData == this.country_list[i]['dial_code']) {
-  //       return this.country_list[i]['code'].toLowerCase();
-  //     }
-  //   }
-  // }
-
   getSelectedCode(code) {
     for (let i in this.country_list) {
       if (this.country_list[i]['code'] == code) {
@@ -101,5 +93,16 @@ export class DataProvider {
       }
     }
     return this.country_list[0];
+  }
+
+  getAirlineList() {
+    for (let i=1; i<20; i++) {
+      let temp = {
+        id: i,
+        name: 'Emirates',
+        icon: '/assets/imgs/Emirates.png'
+      }
+      this.airline_list.push(temp);
+    }
   }
 }
