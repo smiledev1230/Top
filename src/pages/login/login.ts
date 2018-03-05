@@ -3,7 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { LoginProvider } from '../../providers/login';
 import { EnterPhonePage } from '../enter-phone/enter-phone';
-import { AirlinePage } from '../airline/airline';
 
 @Component({
   selector: 'page-login',
@@ -28,7 +27,6 @@ export class LoginPage {
   }
 
   register() {
-    this.navCtrl.push(AirlinePage);
-    // this.navCtrl.push(EnterPhonePage);
+    this.navCtrl.push(EnterPhonePage);
   }
 }
