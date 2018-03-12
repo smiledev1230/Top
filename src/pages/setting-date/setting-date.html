@@ -3,7 +3,19 @@
     <ion-title>Lets go out</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-
+  <ion-label class="sub-title">Choose Date</ion-label>
+  <ion-label class="calendar-object">
+    <ion-calendar [(ngModel)]="settingDate" (onChange)="onChange($event)" [type]="type" [format]="'YYYY-MM-DD'">
+    </ion-calendar>
+  </ion-label>
+  <ion-label class="set-time">
+    <ion-datetime displayFormat="hh:mm A" pickerFormat="hh:mm A" [(ngModel)]="settingTime"></ion-datetime>
+  </ion-label>
+  <ion-label class="choose-button">
+    <button ion-button full (click)="choose()" tappable>Choose Location</button>
+  </ion-label>
+  <ion-label class="send-button">
+    <button ion-button full (click)="invitation()" tappable>Send Invitation</button>
+  </ion-label>
 </ion-content>

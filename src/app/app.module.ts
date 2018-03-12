@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { MyApp } from './app.component';
+
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
+import { CalendarModule } from "ion2-calendar";
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { LinkedIn } from '@ionic-native/linkedin';
 
-import { MyApp } from './app.component';
 // Import Pages
 import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
@@ -27,6 +29,8 @@ import { SettingDatePage } from '../pages/setting-date/setting-date';
 import { SettingsPage } from '../pages/settings/settings';
 import { EditPage } from '../pages/edit/edit';
 import { AirlinePage } from '../pages/airline/airline';
+import { InvitationPage } from '../pages/invitation/invitation';
+import { ChangeLocationPage } from '../pages/change-location/change-location';
 
 import { LoginProvider } from '../providers/login';
 import { ConfigProvider } from '../providers/config';
@@ -62,12 +66,15 @@ import { StatusBar } from '@ionic-native/status-bar';
     SettingDatePage,
     SettingsPage,
     EditPage,
-    AirlinePage
+    AirlinePage,
+    InvitationPage,
+    ChangeLocationPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -91,7 +98,9 @@ import { StatusBar } from '@ionic-native/status-bar';
     SettingDatePage,
     SettingsPage,
     EditPage,
-    AirlinePage
+    AirlinePage,
+    InvitationPage,
+    ChangeLocationPage
   ],
   providers: [
     StatusBar,
