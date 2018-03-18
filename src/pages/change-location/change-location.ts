@@ -1,7 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { DataProvider } from '../../providers/data';
-import { LoginProvider } from '../../providers/login';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Observable } from "rxjs/Observable";
 

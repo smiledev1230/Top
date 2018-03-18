@@ -1,25 +1,48 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ActionSheetController, Platform } from 'ionic-angular';
 import { PassengerPage } from '../passenger/passenger';
+import { DataProvider } from '../../providers/data';
 @Component({
   selector: 'page-add-card',
   templateUrl: 'add-card.html',
 })
 export class AddCardPage {
-  private cardPerson: string = "assets/imgs/camera.png";
-  private userName: any = "Andrey";
-  private userAge: any = "34";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dataProvider: DataProvider, public actionSheet: ActionSheetController, public plt: Platform) {
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddCardPage');
-    let user = this.navParams.get('user');
-    if (user) {
-      this.userName = user.fname + " " + user.lname;
-      let currentDate = new Date();
-      let birthdate = new Date(user.birthdate);
-      this.userAge = currentDate.getFullYear() - birthdate.getFullYear();
+  }
+
+  attach() {
+    if (this.plt.is('ios') || this.plt.is('android')) {
+      let messageMenu = this.actionSheet.create({
+        title: '',
+        buttons: [{
+          text: 'Camera',
+          icon: 'camera',
+          handler: () => {
+            console.log("take photo");
+          }
+        },{
+          text: 'Photo Library',
+          icon: 'image',
+          handler: () => {
+            console.log("Video");
+          }
+        },{
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log("cancelled");
+          }
+        }]
+      });
+      messageMenu.present();
+      messageMenu.onDidDismiss((data)=>{
+        
+      });
     }
   }
 

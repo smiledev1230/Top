@@ -92,3 +92,8 @@ ion-col {
         height: 33.33%;
     }
 }
+ion-action-sheet .action-sheet-container {
+    .action-sheet-button {
+        color: $title-color;
+    }
+}

@@ -8,11 +8,11 @@
 </ion-header>
 <ion-content padding>
   <div class="card-header">
-    <img [src]="cardPerson" class="card-person" tappable/>
+    <img src="{{dataProvider.user.employee_card}}" class="card-person" tappable (click)="attach()"/>
   </div>
   <ion-list class="card-content">
-    <img class="add-plus" tappable>
-    <ion-label class="header-text">{{userName}}<br>{{userAge}}</ion-label>
+    <img class="add-plus" tappable (click)="attach()">
+    <ion-label class="header-text">{{dataProvider.user.fname}} {{dataProvider.user.lname}}<br>{{dataProvider.user.age}}</ion-label>
     <ion-label class="upload-text">Get top verified - upload employee card</ion-label>
     <p>Photo will be deleted after verification</p>
     <img class="add-card-button" tappable (click)="nextPage()"/>
