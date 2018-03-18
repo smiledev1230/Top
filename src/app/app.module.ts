@@ -8,6 +8,7 @@ import { CalendarModule } from "ion2-calendar";
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { LinkedIn } from '@ionic-native/linkedin';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 // Import Pages
 import { HomePage } from '../pages/home/home';
@@ -43,6 +44,7 @@ import { AirlinePipe } from '../pipes/airline';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { LoadingProvider } from '../providers/loading';
+import { ImageProvider } from '../providers/image';
 
 @NgModule({
   declarations: [
@@ -115,6 +117,8 @@ import { LoadingProvider } from '../providers/loading';
     Geolocation,
     LoadingProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ImageProvider,
+    Camera
   ]
 })
 export class AppModule {}

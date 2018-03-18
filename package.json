@@ -20,6 +20,7 @@
     "@angular/http": "5.0.3",
     "@angular/platform-browser": "5.0.3",
     "@angular/platform-browser-dynamic": "5.0.3",
+    "@ionic-native/camera": "^4.5.3",
     "@ionic-native/core": "4.4.0",
     "@ionic-native/facebook": "^4.5.3",
     "@ionic-native/geolocation": "^4.5.3",
@@ -28,7 +29,8 @@
     "@ionic-native/status-bar": "4.4.0",
     "@ionic/storage": "2.1.3",
     "cordova-android": "~7.0.0",
-    "cordova-ios": "~4.5.4",
+    "cordova-ios": "4.4.0",
+    "cordova-plugin-camera": "^4.0.2",
     "cordova-plugin-device": "^2.0.1",
     "cordova-plugin-facebook4": "^1.9.1",
     "cordova-plugin-geolocation": "^4.0.1",
@@ -68,6 +70,10 @@
       },
       "cordova-plugin-geolocation": {
         "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
+      },
+      "cordova-plugin-camera": {
+        "CAMERA_USAGE_DESCRIPTION": "Camera Usage",
+        "PHOTOLIBRARY_USAGE_DESCRIPTION": "Photo Library Usage"
       }
     },
     "platforms": [
