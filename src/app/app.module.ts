@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { CalendarModule } from "ion2-calendar";
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { LinkedIn } from '@ionic-native/linkedin';
+import { Geolocation } from '@ionic-native/geolocation';
 
 // Import Pages
 import { HomePage } from '../pages/home/home';
@@ -41,6 +42,7 @@ import { AirlinePipe } from '../pipes/airline';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { LoadingProvider } from '../providers/loading';
 
 @NgModule({
   declarations: [
@@ -105,12 +107,14 @@ import { StatusBar } from '@ionic-native/status-bar';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
     ConfigProvider,
     Facebook,
     LinkedIn,
-    DataProvider
+    DataProvider,
+    Geolocation,
+    LoadingProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}

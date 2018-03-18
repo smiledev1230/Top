@@ -1,12 +1,15 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>change-location</ion-title>
+    <ion-searchbar #searchbar placeholder="Search" [(ngModel)]="searchWord" ></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button tappable (click)="cancel()">Cancel</button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
+  <div #map id="map"></div>
 </ion-content>
+<ion-footer>
+  <button ion-button color="primary" full (click)="saveLocation()" tappable>Save Location</button>
+</ion-footer>

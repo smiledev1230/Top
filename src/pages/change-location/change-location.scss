@@ -1,3 +1,26 @@
 page-change-location {
-
+    ion-header {
+        ion-searchbar {
+            .searchbar-input-container .searchbar-input {
+                border-radius: 15px;
+                background-color: #f5f5f5 !important;
+            }
+        }
+        .bar-buttons .bar-button {
+            color: #b54c62;
+            font-size: 14px;
+        }
+    }
+    #map{
+        position: unset !important;
+        overflow: visible !important;
+        width: 105%;
+        height: 200px;
+        margin-left: -3%;
+    }
+    .footer .button {
+        background-color: #fff;
+        color: #000;
+        font-size: 16px;
+    }
 }

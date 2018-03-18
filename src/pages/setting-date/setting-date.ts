@@ -39,6 +39,6 @@ export class SettingDatePage {
   }
   
   invitation() {
-    this.navCtrl.push(InvitationPage);
+    // this.navCtrl.push(InvitationPage);
   }
 }

@@ -35,6 +35,9 @@ export class DataProvider {
 
   public country_list: any = [];
   public airline_list: any = [];
+  public lat: any;
+  public long: any;
+  public range: any = 50;
 
   constructor(public http: Http) {
     console.log('Hello DataProvider Provider');
