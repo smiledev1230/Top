@@ -36,15 +36,16 @@ import { ChangeLocationPage } from '../pages/change-location/change-location';
 
 import { LoginProvider } from '../providers/login';
 import { ConfigProvider } from '../providers/config';
+import { RestServiceProvider } from '../providers/rest';
 import { DataProvider } from '../providers/data';
+import { LoadingProvider } from '../providers/loading';
+import { ImageProvider } from '../providers/image';
 
 import { LocationPipe } from '../pipes/location';
 import { AirlinePipe } from '../pipes/airline';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { LoadingProvider } from '../providers/loading';
-import { ImageProvider } from '../providers/image';
 
 @NgModule({
   declarations: [
@@ -118,7 +119,8 @@ import { ImageProvider } from '../providers/image';
     LoadingProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ImageProvider,
-    Camera
+    Camera,
+    RestServiceProvider
   ]
 })
 export class AppModule {}

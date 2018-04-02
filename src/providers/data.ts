@@ -1,38 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
 
 @Injectable()
 export class DataProvider {
-  public user = {
-    phone_number: '',
-    fname: 'Andrey',
-    lname: '',
-    gender: 1,
-    interested_in: 1,
-    birthdate: new Date().toISOString(),
-    country_code: 'AF',
-    country: '+93',
-    age: 34,
-    ​payment_success: 0,
-    ​push_access: 0,
-    ​push_token: '',
-    ​device_type: '',
-    ​employee_card: 'assets/imgs/camera.png',
-    ​pictures: [],
-    ​user_geolocation_city: 'Afghanistan',
-    ​user_geolocation_range: 20,
-    user_geolocation_lng: 0,
-    user_geolocation_lat: 0,
-    user_age_range_min: 10,
-    user_age_range_max: 80,
-    ​user_avalibility: 0,
-    ​user_preview_only_verified: 0,
-    ​airline: 1,
-    ​user_description: '',
-    ​is_smoking: 1
-  }
-
+  public user: any;
   public country_list: any = [];
   public airline_list: any = [];
   public lat: any;
@@ -41,6 +14,7 @@ export class DataProvider {
 
   constructor(public http: Http) {
     console.log('Hello DataProvider Provider');
+    this.initUser();
     this.getAirlineList();
   }
 
@@ -54,19 +28,19 @@ export class DataProvider {
       birthdate: new Date().toISOString(),
       country_code: 'AF',
       country: '+93',
-      age: 0,
+      age: 34,
       ​payment_success: 0,
       ​push_access: 0,
       ​push_token: '',
       ​device_type: '',
-      ​employee_card: '',
+      ​employee_card: 'assets/imgs/camera.png',
       ​pictures: [],
       ​user_geolocation_city: 'Afghanistan',
-      ​user_geolocation_range: 0,
+      ​user_geolocation_range: 20,
       user_geolocation_lng: 0,
       user_geolocation_lat: 0,
-      user_age_range_min: 0,
-      user_age_range_max: 100,
+      user_age_range_min: 10,
+      user_age_range_max: 80,
       ​user_avalibility: 0,
       ​user_preview_only_verified: 0,
       ​airline: 1,

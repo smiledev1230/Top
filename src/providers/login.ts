@@ -3,14 +3,17 @@ import { NavController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { LinkedIn } from '@ionic-native/linkedin';
 import { ConfigProvider } from './config';
+import { RestServiceProvider } from './rest';
 import { HomePage } from '../pages/home/home';
 import { EnterPhonePage } from '../pages/enter-phone/enter-phone';
 
 @Injectable()
 export class LoginProvider {
   private navCtrl: NavController;
-  constructor( public fb: Facebook, public linkedin: LinkedIn) {
-
+  constructor( public fb: Facebook, public linkedin: LinkedIn, public restProvider: RestServiceProvider) {
+    this.restProvider.getHttp(this.restProvider.getUser()).then((user)=> {
+      console.log(user)
+    });
   }
 
   setNavController(navCtrl) {
